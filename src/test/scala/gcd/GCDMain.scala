@@ -24,7 +24,7 @@ import chisel3._
   * }}}
   */
 object GCDMain extends App {
-  iotesters.Driver.execute(args, () => new GCD) {
+  iotesters.Driver.execute(args, () => new GCDTesterMod) {
     c => new GCDUnitTester(c)
   }
 }
@@ -45,5 +45,5 @@ object GCDMain extends App {
   * }}}
   */
 object GCDRepl extends App {
-  iotesters.Driver.executeFirrtlRepl(args, () => new GCD)
+  iotesters.Driver.executeFirrtlRepl(args, () => new GCDTesterMod)
 }
